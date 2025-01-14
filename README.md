@@ -22,23 +22,17 @@ This project was developed as part of a course assignment for the subject Web Ap
     cd cooking-blog
     ```
 
-2. Create a virtual environment and activate it:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. Install the dependencies:
+2. Install the dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Run the development server:
+3. Run the development server:
     ```bash
     python manage.py runserver
     ```
 
-5. Open your browser and go to `http://127.0.0.1:8000/home` to see the application.
+4. Open your browser and go to `http://127.0.0.1:8000/home` to see the application.
 
 ## Usage
 
