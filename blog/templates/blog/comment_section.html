@@ -1,0 +1,35 @@
+<h2>Comments</h2>
+
+<ul class="comment-list">
+    {% for comment in comments %}
+    <li class="comment-item">
+        {% if my_account %}
+            {% if comment.recipe %}
+                <p class="comment-reference"><strong>Recipe:</strong> {{ comment.recipe }}</p>
+            {% else %}
+                <p class="comment-reference"><strong>Blog Post:</strong> {{ comment.blog_post }}</p>
+            {% endif %}
+        {% endif %}
+
+        <p><strong class="comment-author">{{ comment.author.username }}</strong>: {{ comment.content }}</p>
+
+        <p class="comment-time">
+            <small>
+                {% if comment.last_edited_at %}
+                    Last edited on {{ comment.last_edited_at }}
+                {% else %}
+                    Posted on {{ comment.created_at }}
+                {% endif %}
+            </small>
+        </p>
+
+        {% if user.is_authenticated and user == comment.author %}
+        <div class="comment-actions">
+            <a href="{% url 'edit_comment' comment.pk %}?next={{ request.path }}" class="edit-link">Edit or Delete</a>
+        </div>
+        {% endif %}
+    </li>
+    {% empty %}
+    <li class="no-comments">No comments found.</li>
+    {% endfor %}
+</ul>

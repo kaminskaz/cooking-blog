@@ -1,0 +1,26 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A cooking blog with delicious recipes.">
+    <meta name="author" content="Zofia Kaminska">
+    <title>{% block title %}Cooking Blog{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+</head>
+<body>
+    {% include "blog/navigation.html" %}
+
+    <main class="content">
+        {% block content %}This page is still empty{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2021 Cooking Blog</p>
+        </div>
+    </footer>
+</body>
+</html>

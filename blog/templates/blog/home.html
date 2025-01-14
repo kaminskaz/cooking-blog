@@ -1,0 +1,53 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Home - Cooking Blog{% endblock %}
+
+{% block content %}
+    <header class="intro-header">
+        <div class="intro-content">
+            <h1>Welcome to the Cooking Blog!</h1>
+            <p>Find delicious recipes and blog posts about cooking, tips, and tricks to help you master the kitchen!</p>
+        </div>
+    </header>
+
+    <main>
+        <h2>Explore Our Content</h2>
+        <div class="content-links">
+            <!-- Recipes Section -->
+            <div class="link-item">
+                <div class="card">
+                    <img src="/media/home_images/recipe.png" alt="Recipes" class="section-img">
+                    <div class="card-content">
+                        <h3>Recipes</h3>
+                        <p>Discover our collection of recipes for every occasion!</p>
+                        <a href="{% url 'recipe_list' %}" class="btn">Browse Recipes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Posts Section -->
+            <div class="link-item">
+                <div class="card">
+                    <img src="/media/home_images/tips-and-tricks.png" alt="Blog Posts" class="section-img">
+                    <div class="card-content">
+                        <h3>Blog Posts</h3>
+                        <p>Read through our posts for cooking tips, tricks, and more!</p>
+                        <a href="{% url 'blog_list' %}" class="btn">View Blog Posts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contact" class="contact">
+    <div class="contact-container">
+        <h2>Contact Information</h2>
+        <p>If you have any questions, feel free to reach out to us:</p>
+        <ul>
+            <li><a href="mailto:zosiagotuje@cookingblog.com">zosiagotuje@cookingblog.com</a></li>
+            <li><a href="https://www.facebook.com/zosiagotuje" target="_blank">Facebook Page</a></li>
+            <li><a href="https://www.instagram.com/zosiek_cosiek" target="_blank">Instagram Page</a></li>
+        </ul>
+    </div>
+</footer>
+{% endblock %}

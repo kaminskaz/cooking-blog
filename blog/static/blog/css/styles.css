@@ -1,0 +1,1197 @@
+/* wiem ze pewnie powino byc w osobnych plikach dla przejrzystosci ale juz nie bede przeklejac wiec zostawilam komentarz /* styles for ... zeby łatwiej było szukać */
+
+/* styles for home page */
+body {
+    font-family: "Arial Nova Light", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f4f0;
+    color: #4a4a4a;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+/* Nawigacja */
+.navbar {
+    background-color: #5c3317;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    transition: color 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.navbar a:hover {
+    color: #d2b48c;
+}
+
+/* Nagłówek */
+.intro-header {
+    color: #5c3317;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    text-align: center;
+    padding-top:  20px;
+    padding-bottom: 20px;
+    border-color: #5c3317;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.intro-header h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+}
+
+.intro-header p {
+    font-size: 18px;
+    font-style: italic;
+    color : #5c3317;
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+/* Główna treść */
+main.content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 75vh;
+}
+
+main.content h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #5c3317; /* Jasny brąz */
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+main.content h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #5c3317;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.content-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link-item {
+    flex: 1;
+    max-width: 45%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 15px auto 0 auto;
+    border-radius: 12px 12px 12px 12px;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.card-content p {
+    font-size: 19px;
+    color: #5c3317;
+    margin-bottom: 20px;
+}
+
+.card-content .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+.card-content .btn:hover {
+    background-color: #5c3317;
+}
+
+/* Stopka */
+.footer-container {
+    background-color: #5c3317;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 5px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer.contact {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+footer.contact h2 {
+    font-size: 28px;
+    color: #5c3317;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+footer.contact p {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+footer.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer.contact ul li {
+    margin: 5px 0;
+    padding: 10px 20px;
+    background-color: #8b4513;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+footer.contact ul li:hover {
+    background-color: #5c3317;
+}
+
+footer.contact a {
+    color: #f7f4f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer.contact a:hover {
+    color: #d2b48c;
+    text-decoration: underline;
+}
+
+/* styles for recipe list */
+
+.recipe-page {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #8b4513; /* Dark brown */
+}
+
+/* Search Bar Styling */
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 70%;
+    max-width: 600px;
+    padding: 10px;
+    border: 2px solid #8b4513;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #5c3317; /* Darker brown */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #f7f4f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-link {
+    display: block;
+    padding: 10px;
+    color: #8b4513;
+    text-decoration: none;
+    border-bottom: 1px solid #d2b48c;
+    transition: background-color 0.3s ease;
+}
+
+.category-link:hover,
+.category-link.selected {
+    background-color: #d2b48c;
+    color: #5c3317;
+    font-weight: bold;
+}
+
+/* Recipe List Styles */
+.content-container {
+    display: flex;
+    gap: 20px;
+}
+
+.recipe-list {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+.recipe-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.recipe-item {
+    background-color: #f7f4f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-link {
+    text-decoration: none;
+    color: #8b4513;
+}
+
+.recipe-link h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.recipe-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.recipe-rating {
+    font-size: 16px;
+    color: #5c3317;
+    margin-top: 10px;
+}
+
+/* Back to All Recipes Link */
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #8b4513; /* Dark brown */
+    background-color: #f7f4f0; /* Light beige */
+    text-decoration: none;
+    border: 2px solid #8b4513; /* Border matches text color */
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Arial Nova Light", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #8b4513; /* Dark brown on hover */
+    color: #f7f4f0; /* Light beige text on hover */
+}
+
+/* Reduced Space Above Page Title */
+.page-title {
+    text-align: center;
+    margin-top: 10px; /* Reduced margin */
+    font-size: 38px;
+    color: #5c3317;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* styles for recipe detail */
+/* Recipe Detail Page Styles */
+.recipe-detail-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #8b4513;
+    background-color: #f7f4f0;
+    text-decoration: none;
+    border: 2px solid #8b4513;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #8b4513;
+    color: #f7f4f0;
+}
+
+/* Save Recipe Link */
+.save-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #ffffff;
+    background-color: #8b4513;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    float: right;
+}
+
+.save-link:hover {
+    background-color: #5c3317;
+}
+
+/* Recipe Title */
+.recipe-title {
+    text-align: center;
+    font-size: 36px;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+/* Recipe Description */
+.recipe-description {
+    text-align: center;
+    font-size: 18px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Warning Message */
+.alert-warning {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    color: #856404;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Recipe Image */
+.recipe-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ingredients and Instructions */
+.recipe-ingredients,
+.recipe-instructions {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f7f4f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-ingredients h2,
+.recipe-instructions h2 {
+    font-size: 24px;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+.recipe-ingredients ul,
+.recipe-instructions ol {
+    font-size: 18px;
+    color: #4a4a4a;
+}
+
+.recipe-ingredients ul li,
+.recipe-instructions ol li {
+    margin-bottom: 8px;
+}
+
+/* Instruction Images */
+.instruction-image {
+    width: 70%;
+    max-width: 400px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+/* Average Rating Section */
+.average-rating {
+    text-align: center;
+    font-size: 22px;
+    color: #8b4513;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* Rating Form Section */
+.rating-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Compact Rating Form */
+.rate-form {
+    padding: 10px;
+    background-color: #f7f4f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    width: auto;
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+/* Rating Form fields */
+.rate-form input,
+.rate-form select,
+.rate-form button {
+    font-size: 14px;
+    padding: 6px;
+    margin: 6px 0; /* Reduced margin */
+    width: 100%; /* Full width form elements */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Rating Form button */
+.rate-form button {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rate-form button:hover {
+    background-color: #5c3317;
+}
+
+/* Heading for Rating Section */
+.rate-form h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #8b4513;
+    text-align: center; /* Center heading */
+}
+
+/* Remove the default spacing from the form's paragraphs (for compactness) */
+.rate-form p {
+    font-size: 14px;
+    margin: 0; /* Remove margin for compactness */
+    color: #4a4a4a;
+}
+
+/* Comment Form Styling */
+.comment-form {
+    padding: 20px;
+    background-color: #f7f4f0; /* Light background for the form */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Input fields in the comment form */
+.comment-form input,
+.comment-form textarea,
+.comment-form button {
+    font-size: 14px; /* Smaller font size */
+    padding: 8px; /* Reduced padding */
+    margin: 8px 0; /* Reduced margin */
+    width: 100%; /* Full width form elements */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 4px;
+}
+
+/* Submit button */
+.comment-form button {
+    background-color: #8b4513; /* Dark brown for button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #5c3317; /* Darker color on hover */
+}
+
+/* Error message styling */
+#comment-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Heading inside the comment form */
+.comment-form h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #8b4513; /* Dark brown for the heading */
+}
+
+/* Textarea field styling */
+.comment-form textarea {
+    resize: vertical; /* Allow vertical resize only */
+    min-height: 100px; /* Set a minimum height for the textarea */
+}
+
+/* Informational text */
+.comment-form p {
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+
+/* styles for blog list page */
+/* Blog List Page Styling */
+.blog-list-page {
+    background-color: #f7f4f0;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+/* List of Blog Posts */
+.blog-posts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-title {
+    font-size: 28px;
+    color: #8b4513;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.blog-post-title:hover {
+    text-decoration: underline;
+}
+
+/* Meta Information */
+.blog-post-meta {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.blog-post-likes, .blog-post-comments {
+    font-size: 14px;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+/* Blog Post Image */
+.blog-post-image {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.small-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .blog-list-page {
+        padding: 15px;
+    }
+
+    .blog-post {
+        padding: 15px;
+    }
+
+    .blog-post-title {
+        font-size: 24px;
+    }
+
+    .blog-post-meta, .blog-post-likes, .blog-post-comments {
+        font-size: 12px;
+    }
+}
+
+/*styles for blog detail */
+/* Blog Detail Page Styles */
+.post-title {
+    text-align: center;
+    font-size: 36px;
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+.post-meta {
+    text-align: center;
+    font-size: 16px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    font-size: 18px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #8b4513;
+    background-color: #f7f4f0;
+    text-decoration: none;
+    border: 2px solid #8b4513;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Arial Nova Light", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #8b4513;
+    color: #f7f4f0;
+}
+
+.interaction-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 5px;
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+.btn:hover {
+    background-color: #5c3317;
+}
+
+/* Specific Button Styles */
+.save-post-btn {
+    background-color: #5c3317;
+}
+
+.save-post-btn:hover {
+    background-color: #8b4513;
+}
+
+.like-btn {
+    background-color: #8b4513;
+}
+
+.like-btn:hover {
+    background-color: #5c3317;
+}
+
+/* Comment Form Button */
+.comment-btn {
+    background-color: #8b4513;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.comment-btn:hover {
+    background-color: #5c3317;
+}
+
+/* Small Image Styling */
+.small-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* make it in the center of the page */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Comment Section Styling */
+.comment-form {
+    padding: 20px;
+    background-color: #f7f4f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.comment-form input,
+.comment-form textarea,
+.comment-form button {
+    font-size: 14px;
+    padding: 8px;
+    margin: 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.comment-form button {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+    background-color: #5c3317;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .post-title {
+        font-size: 28px;
+    }
+
+    .post-meta {
+        font-size: 14px;
+    }
+
+    .post-content {
+        font-size: 16px;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .back-link {
+        font-size: 14px;
+    }
+}
+
+/* styles for my account */
+
+/* General Account Page Styles */
+.account-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f7f4f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Arial Nova Light", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #8b4513; /* Dark brown */
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+/* Section Style for Saved Recipes, Saved Posts, and Export Comments */
+.saved-section,
+.export-section {
+    margin-bottom: 30px;
+}
+
+.saved-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.saved-section ul li {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.saved-section ul li a {
+    text-decoration: none;
+    color: #8b4513;
+    font-weight: bold;
+}
+
+.saved-section ul li a:hover {
+    color: #5c3317;
+}
+
+.export-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Export Buttons */
+.export-btn {
+    background-color: #8b4513;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.export-btn:hover {
+    background-color: #5c3317;
+}
+
+/* Logout Button */
+.logout-btn {
+    font-size: 16px;
+    color: #8b4513;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+    color: #5c3317;
+}
+
+/* Logout Confirmation Styling */
+#logout-form {
+    display: inline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .account-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .saved-section ul li {
+        font-size: 16px;
+    }
+
+    .export-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .logout-btn {
+        font-size: 14px;
+    }
+}
+
+/* styles for login and registration */
+/* General Styles for Login and Registration Pages */
+.auth-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f7f4f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Arial Nova Light", sans-serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: #8b4513;
+    margin-bottom: 20px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.auth-form button {
+    background-color: #8b4513;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+    background-color: #5c3317;
+}
+
+.auth-link {
+    color: #8b4513;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-link:hover {
+    color: #5c3317;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .auth-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .auth-form button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/*styles for comment section */
+/* Comment Section Styles */
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.comment-item {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-reference {
+    font-size: 14px;
+    color: #8b4513;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #5c3317;
+}
+
+.comment-time small {
+    color: #888;
+    font-size: 12px;
+}
+
+.comment-actions {
+    margin-top: 10px;
+}
+
+.edit-link {
+    color: #8b4513;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 1px solid #8b4513;
+    border-radius: 5px;
+    background-color: #f7f4f0;
+    transition: background-color 0.3s ease;
+}
+
+.edit-link:hover {
+    background-color: #8b4513;
+    color: white;
+}
+
+.no-comments {
+    font-style: italic;
+    color: #888;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .comment-item {
+        padding: 10px;
+    }
+
+    .comment-author {
+        font-size: 14px;
+    }
+
+    .comment-time small {
+        font-size: 11px;
+    }
+
+    .edit-link {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
+

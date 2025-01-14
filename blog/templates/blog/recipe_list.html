@@ -1,0 +1,58 @@
+<!-- blog/templates/blog/recipe_list.html -->
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="recipe-page">
+    <h1 class="page-title">Recipes</h1>
+
+    <div class="search-bar">
+        <form method="get">
+            <input type="text" name="search" placeholder="Search recipes..." value="{{ search_query }}" class="search-input">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </div>
+
+    {% if selected_category %}
+    <a href="{% url 'recipe_list' %}" class="back-link">Back to all recipes</a>
+    {% endif %}
+
+    <div class="content-container">
+        <div class="sidebar">
+            <h2>Categories</h2>
+            <ul class="category-list">
+                {% for code, name in categories %}
+                <li>
+                    <a href="?category={{ code }}{% if search_query %}&search={{ search_query }}{% endif %}"
+                       class="category-link {% if selected_category == code %}selected{% endif %}">
+                        {{ name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="recipe-list">
+            {% if selected_category %}
+            <h2 class="section-title">{{ selected_category|capfirst }} Recipes</h2>
+            {% else %}
+            <h2 class="section-title">All Recipes</h2>
+            {% endif %}
+            <ul class="recipe-items">
+                {% for recipe in recipes %}
+                <li class="recipe-item">
+                    <a href="{% url 'recipe_detail' recipe.pk %}" class="recipe-link">
+                        <h3>{{ recipe.title }}</h3>
+                        {% if recipe.image %}
+                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}" class="recipe-image">
+                        {% endif %}
+                        {% if recipe.average_rating %}
+                        <p class="recipe-rating">Rating: {{ recipe.average_rating |floatformat:1}}</p>
+                        {% endif %}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

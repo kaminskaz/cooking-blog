@@ -1,0 +1,10 @@
+<nav class="navbar">
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'recipe_list' %}">Recipes</a>
+    <a href="{% url 'blog_list' %}">Blog</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'my_account' %}">My Account</a>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</nav>

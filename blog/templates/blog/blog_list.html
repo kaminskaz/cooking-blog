@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Blog Posts{% endblock %}
+
+{% block content %}
+<div class="blog-list-page">
+    <h1>Blog Posts</h1>
+    <ul class="blog-posts">
+        {% for blog_post in blog_posts %}
+        <li class="blog-post">
+            <a href="{% url 'blog_detail' blog_post.pk %}" class="blog-post-title">{{ blog_post.title }}</a>
+            {% if blog_post.image %}
+            <div class="blog-post-image">
+                <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="small-image">
+            </div>
+            {% endif %}
+            <p class="blog-post-meta">Written by: {{ blog_post.author.username }} on {{ blog_post.created_at }}</p>
+            {% if blog_post.likes.count > 0 %}
+            <p class="blog-post-likes">{{ blog_post.likes.count }} like{{ blog_post.likes.count|pluralize }}</p>
+            {% endif %}
+            {% if blog_post.comments.count > 0 %}
+            <p class="blog-post-comments">{{ blog_post.comments.count }} comment{{ blog_post.comments.count|pluralize }}</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

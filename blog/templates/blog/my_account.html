@@ -1,0 +1,54 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="account-container">
+    <h2>My Account</h2>
+    <p>Welcome, <strong>{{ user.username }}</strong>!</p>
+
+    <!-- Logout Section -->
+    <form id="logout-form" method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <a href="#" onclick="confirmLogout()" class="logout-btn">Logout</a>
+    </form>
+
+    <!-- Saved Recipes Section -->
+    <div class="saved-section">
+        <h3>Saved Recipes</h3>
+        <ul>
+            {% for recipe in saved_recipes %}
+            <li><a href="{% url 'recipe_detail' recipe.pk %}">{{ recipe.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Saved Posts Section -->
+    <div class="saved-section">
+        <h3>Saved Posts</h3>
+        <ul>
+            {% for post in saved_posts %}
+            <li><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Export Comments Section -->
+    <div class="export-section">
+        <h3>Export Comments</h3>
+        <div class="export-links">
+            <a href="{% url 'export_comments_xml' %}" class="export-btn">Export to XML</a>
+            <a href="{% url 'export_comments_excel' %}" class="export-btn">Export to Excel</a>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    {% include "blog/comment_section.html" with comments=user_comments my_account=True %}
+</div>
+
+<script>
+function confirmLogout() {
+    if (confirm("Are you sure you want to log out?")) {
+        document.getElementById('logout-form').submit();
+    }
+}
+</script>
+{% endblock %}

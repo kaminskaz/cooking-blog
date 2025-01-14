@@ -1,0 +1,41 @@
+{% extends "blog/base.html" %}
+
+{% block title %}{{ blog_post.title }}{% endblock %}
+
+{% block content %}
+    <a href="{% url 'blog_list' %}" class="back-link">Back to Blog List</a>
+    <h1 class="post-title">{{ blog_post.title }}</h1>
+    <p class="post-meta">Written by: {{ blog_post.author.username }} on {{ blog_post.created_at }}</p>
+
+    {% if blog_post.image %}
+    <img src="{{ blog_post.image.url }}" alt="{{ blog_post.title }}" class="small-image">
+    {% endif %}
+
+    <p class="post-content">{{ blog_post.content | linebreaks }}</p>
+
+    {% if user.is_authenticated %}
+    <div class="interaction-buttons">
+        <a href="{% url 'save_post' blog_post.pk %}" class="btn save-post-btn">Save Post</a>
+        <a href="{% url 'like_post' blog_post.pk %}" class="btn like-btn">
+            {% if user in blog_post.likes.all %}
+                Unlike
+            {% else %}
+                Like
+            {% endif %}
+        </a>
+    </div>
+    {% endif %}
+
+    {% include "blog/comment_section.html" with comments=comments %}
+
+    <h2>Add a Comment</h2>
+    {% if user.is_authenticated %}
+    <form method="post" class="comment-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn comment-btn">Post Comment</button>
+    </form>
+    {% else %}
+    <p>You must be <a href="{% url 'login' %}" class="link">logged in</a> to post a comment.</p>
+    {% endif %}
+{% endblock %}
