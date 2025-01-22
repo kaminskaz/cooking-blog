@@ -80,13 +80,6 @@ class BlogViewsTestCase(TestCase):
         self.assertEqual(response.status_code, 302)  # Redirect after comment
         self.assertEqual(Comment.objects.count(), 2)  # 1 initial comment, 1 from the post
 
-    #def test_recipe_rating(self):
-     #   self.client.login(username='testuser', password='12345')
-      #  response = self.client.post(reverse('recipe_detail', args=[self.recipe.pk]), data={'rating': 5})
-        #self.assertEqual(response.status_code, 302)  # Redirect after rating
-       # self.assertEqual(Rating.objects.count(), 1)  # Check if the rating was saved
-        #self.assertEqual(self.recipe.average_rating, 5)  # Ensure the rating is correctly calculated
-
     def test_edit_comment(self):
         self.client.login(username='testuser', password='12345')
         # Test editing the comment
